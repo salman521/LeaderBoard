@@ -103,6 +103,7 @@ const SearchScreen: React.FC = () => {
     sortedByBananas.forEach(user => {
       if (user.bananas > 0) {
         if (user.bananas === previousBananas) {
+          currentRank += 1;
           rankMapT[user.uid] = currentRank;
         } else {
           currentRank += 1;
