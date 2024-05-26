@@ -72,6 +72,7 @@ const SearchScreen: React.FC = () => {
   const [isFuzzy, setIsFuzzy] = useState(false);
   const [lowestRank, setLowestRank] = useState(0);
 
+  // Added fuzzy search
   function fuzzySearch(query: string) {
     const lowerCaseQuery = query.toLowerCase();
     return leaderboardData
@@ -80,6 +81,7 @@ const SearchScreen: React.FC = () => {
       .slice(0, 10);
   }
 
+  // all functionality for search
   const handleSearchButton = () => {
     setIsFuzzy(false);
     if (!searchName.trim()) {
@@ -140,6 +142,7 @@ const SearchScreen: React.FC = () => {
     dispatch(setFilteredData(sliced));
   };
 
+  // Sort by name
   const handleSortByName = () => {
     if (!searchName) {
       return;
@@ -155,6 +158,8 @@ const SearchScreen: React.FC = () => {
       dispatch(setFilteredData(sortedData));
     }
   };
+
+  // Sort By Rank
   const handleSortByRank = () => {
     if (!searchName) {
       return;
