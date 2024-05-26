@@ -5,21 +5,21 @@ import {
   SET_SEARCH_NAME,
 } from '../actionTypes';
 
-interface GetLeaderboardDataAction {
+export interface GetLeaderboardDataAction {
   type: typeof GET_LEADERBOARD_DATA;
 }
 
-interface SetSearchNameAction {
+export interface SetSearchNameAction {
   type: typeof SET_SEARCH_NAME;
   payload: string;
 }
 
-interface SetRanksMapAction {
+export interface SetRanksMapAction {
   type: typeof SET_RANKS_MAP;
   payload: {[key: string]: number};
 }
 
-interface SetFilteredDataAction {
+export interface SetFilteredDataAction {
   type: typeof SET_FILTERED_DATA;
   payload: User[];
 }
